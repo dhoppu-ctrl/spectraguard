@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- replace with -->
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      var t = localStorage.getItem("sg-theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <meta name="description"
+        content="SpectraGuard by Team BareMetal: exploring food screening through optical sensing, electronic noses and explainable incident memory.">
+  <title>SpectraGuard — Team BareMetal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#project">Skip to content</a>
+  <div class="read-progress" aria-hidden="true"></div>
+
+  <header>
+    <a class="brand" href="#project" aria-label="BareMetal home">
+      <span class="brand-symbol">B<span>↗</span></span>
+      BareMetal
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#problem">The problem</a>
+      <a href="#system">How it works</a>
+      <a href="#timing">Time advantage</a>
+      <!-- replace with -->
+      <a href="#questions">Q&amp;A</a>
+      <a href="#research">Research</a>
+      <a href="#team">Team ↗</a>
+    </nav>
+
+    <div class="header-controls">
+      <button id="motion" class="small-button" aria-pressed="false">
+        Pause motion
+      </button>
+      <button id="theme-toggle" class="small-button"
+              aria-pressed="false" aria-label="Switch to dark theme">
+        ◐ <span>Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap" id="project">
+      <div class="eyebrow hero-meta">
+        <span><i class="status-dot"></i> BAREMETAL / FOOD SYSTEMS</span>
+        <span>CONCEPT SERIES — 001</span>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="product-name">SpectraGuard</p>
+          <h1>Every batch.<br>More <em>insight.</em></h1>
+
+          <p class="hero-copy">
+            Food screening that connects what sensors observe now
+            with what confirmed incidents can teach us about the past.
+          </p>
+
+          <div class="actions">
+            <a class="button" href="#system">
+              Follow the evidence <span>↗</span>
+            </a>
+            <a class="text-link" href="#research">
+              Explore the research ↓
+            </a>
+          </div>
+
+          <div class="hero-footnote">
+            <span class="cross">+</span>
+            STUDENT PROPOSAL · HARDWARE + INCIDENT MEMORY
+          </div>
+        </div>
+
+        <div class="machine" role="img"
+             aria-label="Concept illustration of a SpectraGuard sensor head above a conveyor. This is not a finished engineering design.">
+          <div class="machine-top">
+            <span>SG / INSPECTION MODULE</span>
+            <span><i class="status-dot"></i> CONCEPT</span>
+          </div>
+
+          <div class="machine-grid" aria-hidden="true">
+            <span class="coordinate coordinate-a">X / 008</span>
+            <span class="coordinate coordinate-b">Y / 003</span>
+
+            <div class="sensor-head">
+              <span class="screw screw-a"></span>
+              <span class="screw screw-b"></span>
+              <div class="sensor-brand">SG<span>01</span></div>
+              <div class="sensor-vents"></div>
+              <div class="sensor-label">OPTICAL + GAS</div>
+              <div class="sensor-lens"></div>
+            </div>
+
+            <div class="scan-field"></div>
+            <div class="scan-line"></div>
+
+            <div class="sample sample-one"><span>BATCH A</span></div>
+            <div class="sample sample-two"><span>BATCH B</span></div>
+            <div class="sample sample-three"><span>BATCH C</span></div>
+
+            <div class="conveyor"></div>
+            <div class="machine-caption">SENSE → COMPARE → REVIEW</div>
+          </div>
+
+          <div class="machine-bottom">
+            <span>FIG. 01 / PROPOSED INLINE FORMAT</span>
+            <span>NO LIVE DATA ↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-strip">
+        <div>
+          <span>01 / OBSERVE</span>
+          <strong>Optical + gas sensing</strong>
+        </div>
+        <div>
+          <span>02 / REMEMBER</span>
+          <strong>Confirmed incident history</strong>
+        </div>
+        <div>
+          <span>03 / EXPLAIN</span>
+          <strong>Evidence for human review</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXISTING PROBLEM -->
+    <section class="section wrap" id="problem">
+      <div class="section-label">01 / THE EXISTING PROBLEM</div>
+
+      <div class="split">
+        <h2>A problem can travel<br>further than<br><em>the first batch.</em></h2>
+
+        <div>
+          <p class="lead">
+            An ingredient can enter several products before a recall
+            connects them. Quality teams need both timely observations
+            and traceable batch relationships.
+          </p>
+          <p>
+            FDA’s 2026 powdered-milk recall report documents downstream
+            products made with, or repackaged from, a recalled ingredient.
+            It illustrates why a batch record needs to preserve its
+            supplier and production context.
+            <a href="#news-milk">Read the report [N1]</a>
+          </p>
+          <p>
+            SpectraGuard explores an additional screening layer:
+            combine sensor observations, preserve context and surface
+            relevant earlier incidents for review.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem-grid">
+        <article>
+          <span class="eyebrow">01 / DELAY</span>
+          <h3>Results take time</h3>
+          <p>
+            Some laboratory methods contain lengthy incubation stages.
+            An earlier screening signal could help prioritise attention
+            while the established testing workflow continues.
+          </p>
+        </article>
+
+        <article>
+          <span class="eyebrow">02 / COVERAGE</span>
+          <h3>One signal has limits</h3>
+          <p>
+            Optical and gas measurements offer different observations.
+            Research gives a reason to test their combination for
+            defined food-quality tasks.
+            <a href="#paper-1">See [R1]</a>
+          </p>
+        </article>
+
+        <article>
+          <span class="eyebrow">03 / CONTEXT</span>
+          <h3>History needs a connection</h3>
+          <p>
+            Our proposed case bank links confirmed outcomes to batch
+            context. Whether those links improve future screening is
+            a research question the project still needs to answer.
+          </p>
+        </article>
+      </div>
+
+      <figure class="diagram-panel">
+        <div class="figure-heading">
+          <span class="eyebrow">FIG. 02 / WHY TRACEABILITY MATTERS</span>
+          <span class="tag">CONCEPTUAL RELATIONSHIP</span>
+        </div>
+
+        <div class="supply-flow">
+          <div class="flow-node">
+            <small>ORIGIN</small>
+            <strong>Shared ingredient</strong>
+            <span>Supplier + lot record</span>
+          </div>
+
+          <span class="flow-arrow" aria-hidden="true">→</span>
+
+          <div class="flow-node">
+            <small>PROCESSING</small>
+            <strong>Manufacturing batches</strong>
+            <span>Ingredient links preserved</span>
+          </div>
+
+          <span class="flow-arrow" aria-hidden="true">→</span>
+
+          <div class="flow-branches">
+            <div class="flow-node compact">Product A / batch record</div>
+            <div class="flow-node compact">Product B / batch record</div>
+            <div class="flow-node compact">Product C / batch record</div>
+          </div>
+        </div>
+
+        <figcaption>
+          A shared input can connect several finished products.
+          This diagram explains the traceability relationship; it does
+          not reconstruct any specific company’s production network.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- RECENT REPORTS -->
+    <section class="news-section">
+      <div class="section wrap">
+        <div class="section-label">02 / RECENT FOOD-SAFETY REPORTS</div>
+        <div class="section-heading">
+          <h2>Real incidents.<br><em>Relevant questions.</em></h2>
+          <p>
+            Selected 2026 reports from primary sources.<br>
+            Sources checked 12 September 2026.
+          </p>
+        </div>
+
+        <article class="news-row" id="news-milk">
+          <div class="news-meta">
+            <span class="tag">N1 / INGREDIENT RECALL</span>
+            <time datetime="2026-04-20">20 APR 2026 · INITIAL RECALL</time>
+          </div>
+          <div>
+            <h3>Powdered milk links downstream products</h3>
+            <p>
+              FDA reports that California Dairies recalled bulk powdered
+              milk and buttermilk distributed to wholesalers and
+              manufacturers. Its report lists associated downstream
+              product removals.
+            </p>
+            <p class="news-lesson">
+              <strong>Design implication:</strong> Preserve supplier and
+              ingredient-lot relationships in batch records.
+            </p>
+            <a class="text-link"
+               href="https://www.fda.gov/safety/major-product-recalls/2026-recalls-food-products-associated-powdered-milk-california-dairies-inc-due-potential-salmonella"
+               target="_blank" rel="noopener noreferrer">
+              FDA / Read the source ↗
+            </a>
+          </div>
+          <span class="news-index" aria-hidden="true">01</span>
+        </article>
+
+        <article class="news-row">
+          <div class="news-meta">
+            <span class="tag">N2 / SUPPLIER CONTEXT</span>
+            <time datetime="2026-06-26">26 JUN 2026 · ANNOUNCEMENT</time>
+          </div>
+          <div>
+            <h3>A supplier notification prompts a cheese recall</h3>
+            <p>
+              A La Ceiba Foods announcement published by FDA describes
+              a cottage-cheese recall after notification of a recall
+              action by its supplier, Clover Hill Dairy, concerning
+              possible Listeria contamination.
+            </p>
+            <p class="news-lesson">
+              <strong>Design implication:</strong> A useful interface
+              connects an alert to its originating record.
+            </p>
+            <a class="text-link"
+               href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/la-ceiba-foods-latin-market-inc-recalls-cottage-cheese-products-because-possible-health-risk"
+               target="_blank" rel="noopener noreferrer">
+              Company announcement via FDA ↗
+            </a>
+          </div>
+          <span class="news-index" aria-hidden="true">02</span>
+        </article>
+
+        <article class="news-row">
+          <div class="news-meta">
+            <span class="tag">N3 / EVIDENCE QUALITY</span>
+            <time datetime="2026-04-30">30 APR 2026 · FDA UPDATE</time>
+          </div>
+          <div>
+            <h3>A laboratory finding needs careful interpretation</h3>
+            <p>
+              During the raw-cheddar investigation, FDA reported that
+              one cheese sample’s E. coli strain related to a different
+              2025 outbreak. People in that older outbreak had not
+              reported consuming the company’s raw dairy products.
+            </p>
+            <p class="news-lesson">
+              <strong>Design implication:</strong> A historical match
+              needs contextual review before drawing a conclusion.
+            </p>
+            <a class="text-link"
+               href="https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026"
+               target="_blank" rel="noopener noreferrer">
+              FDA / Read the investigation update ↗
+            </a>
+          </div>
+          <span class="news-index" aria-hidden="true">03</span>
+        </article>
+
+        <p class="note">
+          These are international examples of the problem, not evidence
+          that SpectraGuard could detect the named pathogens or prevent
+          these incidents. Design implications are our interpretation.
+        </p>
+      </div>
+    </section>
+
+    <!-- SYSTEM -->
+    <section class="section wrap" id="system">
+      <div class="section-label">03 / THE PROPOSED SYSTEM</div>
+      <div class="section-heading">
+        <h2>Small signals.<br><em>A connected process.</em></h2>
+        <p>Explore each stage of the architecture.<br>Hardware and models remain to be validated.</p>
+      </div>
+
+      <div class="stage-nav" role="group" aria-label="System stages">
+        <button data-stage="0" aria-pressed="true"><span>01</span> Sense</button>
+        <button data-stage="1" aria-pressed="false"><span>02</span> Fuse</button>
+        <button data-stage="2" aria-pressed="false"><span>03</span> Compare</button>
+        <button data-stage="3" aria-pressed="false"><span>04</span> Remember</button>
+        <button data-stage="4" aria-pressed="false"><span>05</span> Review</button>
+      </div>
+
+      <div class="stage-body" aria-live="polite" aria-atomic="true">
+        <div id="stage-number" class="stage-number">01</div>
+        <div>
+          <p id="stage-tag" class="eyebrow">THE SENSOR LAYER</p>
+          <h3 id="stage-title">Observe the batch through different channels.</h3>
+          <p id="stage-copy">
+            The proposal combines optical measurements and gas responses.
+            Every observation belongs to a batch and timestamp.
+          </p>
+          <p id="stage-note" class="stage-note">
+            Hardware suitability must be tested for the selected food
+            and operating environment.
+          </p>
+        </div>
+        <span class="stage-symbol" aria-hidden="true">◎</span>
+      </div>
+
+      <figure class="diagram-panel">
+        <div class="figure-heading">
+          <span class="eyebrow">FIG. 03 / SENSOR FUSION + QUALITY GATE</span>
+          <span class="tag">PROPOSED WORKFLOW</span>
+        </div>
+
+        <svg class="flowchart" viewBox="0 0 760 530" role="img"
+             aria-labelledby="fusion-title fusion-desc">
+          <title id="fusion-title">Sensor fusion and evidence-quality workflow</title>
+          <desc id="fusion-desc">
+            Optical and gas channels join in a batch record. A quality
+            check routes usable evidence to current and historical
+            comparison, then human review. Inadequate evidence produces
+            an inconclusive outcome requiring review or reacquisition.
+          </desc>
+          <defs>
+            <marker id="arrow-fusion" viewBox="0 0 10 10"
+                    refX="9" refY="5" markerWidth="7" markerHeight="7"
+                    orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10Z" class="arrowhead"/>
+            </marker>
+          </defs>
+
+          <g class="connectors" marker-end="url(#arrow-fusion)">
+            <path d="M190 90V120H380V148"/>
+            <path d="M570 90V120H380"/>
+            <path d="M380 218V252"/>
+            <path d="M260 302H155V385"/>
+            <path d="M500 302H605V385"/>
+            <path d="M605 445V475H380V490"/>
+          </g>
+
+          <rect x="65" y="20" width="250" height="70" rx="4"/>
+          <text x="190" y="50">Optical channels</text>
+          <text x="190" y="73" class="small-text">Example: 8 readings</text>
+
+          <rect x="445" y="20" width="250" height="70" rx="4"/>
+          <text x="570" y="50">Gas channels</text>
+          <text x="570" y="73" class="small-text">Example: 3 readings</text>
+
+          <rect x="235" y="148" width="290" height="70" rx="4" class="accent-node"/>
+          <text x="380" y="178">Combined batch record</text>
+          <text x="380" y="201" class="small-text">Features + timestamp + context</text>
+
+          <path d="M380 252L500 302L380 352L260 302Z" class="decision-node"/>
+          <text x="380" y="299">Usable evidence?</text>
+          <text x="380" y="321" class="small-text">Quality check</text>
+
+          <text x="195" y="289" class="small-text">NO</text>
+          <text x="562" y="289" class="small-text">YES</text>
+
+          <rect x="35" y="385" width="240" height="60" rx="4"/>
+          <text x="155" y="410">Inconclusive</text>
+          <text x="155" y="432" class="small-text">Review / reacquire</text>
+
+          <rect x="485" y="385" width="240" height="60" rx="4"/>
+          <text x="605" y="410">Compare evidence</text>
+          <text x="605" y="432" class="small-text">Current + historical</text>
+
+          <rect x="270" y="490" width="220" height="35" rx="4" class="accent-node"/>
+          <text x="380" y="513">Human review</text>
+        </svg>
+
+        <figcaption>
+          <strong>How to read it:</strong> The two sensing paths combine
+          before interpretation. The quality gate preserves an explicit
+          inconclusive outcome when the evidence is insufficient.
+          Combining measurements does not automatically make them reliable.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- TIMING GRAPHS -->
+    <section class="timing-section" id="timing">
+      <div class="section wrap">
+        <div class="section-label">04 / THE POTENTIAL TIME ADVANTAGE</div>
+        <div class="section-heading">
+          <h2>Earlier attention.<br><em>Confirmation still matters.</em></h2>
+          <p>
+            A published laboratory stage and a hypothetical screening target.<br>
+            Different outputs, shown on an explicit time scale.
+          </p>
+        </div>
+
+        <div class="timing-grid">
+          <div class="timing-controls">
+            <span class="tag">ASSUMPTION EXPLORER</span>
+            <h3>What could an earlier alert change?</h3>
+            <p>
+              FDA’s January 2026 aerobic plate count method specifies
+              a 48 ± 2 hour incubation stage. We use its 48-hour
+              nominal duration as a reference.
+              <a href="#method-source">[M1]</a>
+            </p>
+
+            <label for="target-seconds">
+              Illustrative screening target
+              <output id="target-label" for="target-seconds">60 seconds</output>
+            </label>
+            <input id="target-seconds" type="range"
+                   min="30" max="300" step="10" value="60"
+                   aria-describedby="target-help">
+            <div class="range-labels"><span>30 s</span><span>300 s</span></div>
+
+            <p id="target-help" class="note">
+              This adjustable target is a design assumption, not a
+              measured result. It represents a possible first alert,
+              not an equivalent laboratory result.
+            </p>
+
+            <div class="time-result" aria-live="polite" aria-atomic="true">
+              <span class="eyebrow">HYPOTHETICAL EARLIER-ALERT WINDOW</span>
+              <strong id="lead-time">47 h 59 min</strong>
+              <p id="difference-text">
+                99.97% shorter interval to a different, preliminary output.
+              </p>
+              <span class="note">Measured SpectraGuard time reduction: not available.</span>
+            </div>
+          </div>
+
+          <div class="chart-panel">
+            <div class="figure-heading">
+              <span class="eyebrow">FIG. 04 / ELAPSED-TIME COMPARISON</span>
+              <span class="tag">LINEAR / HOURS</span>
+            </div>
+
+            <svg id="time-chart" class="chart" viewBox="0 0 680 310"
+                 role="img" aria-labelledby="time-title time-desc">
+              <title id="time-title">Laboratory reference and screening target</title>
+              <desc id="time-desc">
+                A nominal laboratory incubation stage lasts 48 hours.
+                The hypothetical screening target is 60 seconds.
+                These outputs are not equivalent.
+              </desc>
+
+              <g class="chart-grid">
+                <path d="M70 55V250M205 55V250M340 55V250M475 55V250M610 55V250"/>
+              </g>
+
+              <text x="70" y="34" class="chart-label">Published incubation stage [M1]</text>
+              <rect x="70" y="64" width="540" height="44" class="reference-bar"/>
+              <text x="594" y="92" text-anchor="end" class="bar-label">48 hours</text>
+
+              <text x="70" y="154" class="chart-label">Hypothetical preliminary alert</text>
+              <rect id="target-bar" x="70" y="181" width=".1875" height="34"
+                    class="target-bar"/>
+              <circle id="target-dot" cx="70.1875" cy="198" r="5"
+                      class="target-dot"/>
+              <text id="target-chart-label" x="88" y="203"
+                    class="chart-label">60 seconds / target</text>
+
+              <path d="M70 250H610" class="axis"/>
+              <g class="tick-label">
+                <text x="70" y="276" text-anchor="middle">0</text>
+                <text x="205" y="276" text-anchor="middle">12</text>
+                <text x="340" y="276" text-anchor="middle">24</text>
+                <text x="475" y="276" text-anchor="middle">36</text>
+                <text x="610" y="276" text-anchor="middle">48 h</text>
+              </g>
+            </svg>
+
+            <p class="chart-explanation">
+              The green duration is nearly invisible on a 48-hour scale.
+              The circle marks its endpoint; the circle’s size does not
+              represent duration. The laboratory reference excludes
+              preparation, reporting and any further testing.
+            </p>
+
+            <details class="chart-data">
+              <summary>Exact values and calculation</summary>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>Quantity</th><th>Value</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Incubation reference</td><td>172,800 s</td><td>Published nominal stage</td></tr>
+                    <tr><td>Screening interval</td><td id="table-target">60 s</td><td>Hypothetical</td></tr>
+                    <tr><td>Difference</td><td id="table-gap">172,740 s</td><td>Calculated</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="note">
+                Difference = 172,800 − target seconds.
+                Relative interval difference = difference ÷ 172,800 × 100.
+                This is not a measure of faster pathogen detection,
+                earlier batch release or reduced laboratory time.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <figure class="budget-panel">
+          <div class="figure-heading">
+            <span class="eyebrow">FIG. 05 / ZOOM INTO THE TARGET INTERVAL</span>
+            <span class="tag">ILLUSTRATIVE TIME ALLOCATION</span>
+          </div>
+
+          <div class="budget-bar" aria-hidden="true">
+            <span class="budget-sensing"></span>
+            <span class="budget-processing"></span>
+            <span class="budget-output"></span>
+          </div>
+
+          <div class="budget-legend">
+            <div>
+              <i class="swatch sensing"></i>
+              <span>Acquire observations</span>
+              <strong id="budget-sensing">30 s</strong>
+            </div>
+            <div>
+              <i class="swatch processing"></i>
+              <span>Process + compare</span>
+              <strong id="budget-processing">18 s</strong>
+            </div>
+            <div>
+              <i class="swatch output"></i>
+              <span>Record + display</span>
+              <strong id="budget-output">12 s</strong>
+            </div>
+          </div>
+
+          <figcaption>
+            <strong>How to read it:</strong> This second graph expands the
+            selected target into a hypothetical 50% / 30% / 20% budget.
+            These allocations are placeholders for future measurements.
+            Warm-up, sampling, sensor recovery and repeated measurements
+            may increase real cycle time. Human review and confirmatory
+            testing are outside this target.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MEMORY -->
+    <section class="section wrap" id="memory">
+      <div class="section-label">05 / EXPLAINABLE RECURRENCE MEMORY</div>
+      <div class="section-heading">
+        <h2>A flag should come<br>with <em>a reason.</em></h2>
+        <p>Retrieve relevant cases.<br>Keep the evidence behind the connection.</p>
+      </div>
+
+      <div class="split memory-grid">
+        <div>
+          <p class="lead">
+            “This looks familiar” is useful only when the system
+            can explain what looks familiar.
+          </p>
+          <p>
+            The proposed memory layer compares a new record with
+            confirmed incidents. Relevant context might include source,
+            product category, season and sensor-feature similarity.
+          </p>
+
+          <div class="memory-record">
+            <span class="eyebrow">EXAMPLE CASE RECORD / FICTIONAL</span>
+            <dl>
+              <div><dt>Case ID</dt><dd>SG-014</dd></div>
+              <div><dt>Context match</dt><dd>Shared source</dd></div>
+              <div><dt>Evidence link</dt><dd>Related feature pattern</dd></div>
+              <div><dt>Outcome status</dt><dd>Seeded confirmed example</dd></div>
+            </dl>
+          </div>
+
+          <p class="note">
+            Historical matching is a proposed extension. The papers
+            below do not establish that this recurrence engine predicts
+            future incidents or prevents recalls.
+          </p>
+        </div>
+
+        <figure class="diagram-panel">
+          <div class="figure-heading">
+            <span class="eyebrow">FIG. 06 / TRUSTED CASE UPDATE</span>
+          </div>
+
+          <svg class="flowchart" viewBox="0 0 560 525" role="img"
+               aria-labelledby="memory-title memory-desc">
+            <title id="memory-title">Human-reviewed case-memory update</title>
+            <desc id="memory-desc">
+              A batch and existing case bank feed case retrieval.
+              A reviewer examines the evidence. Confirmed incidents
+              enter the trusted case bank; unconfirmed alerts remain
+              separate. Updated history is available for later batches.
+            </desc>
+            <defs>
+              <marker id="arrow-memory" viewBox="0 0 10 10"
+                      refX="9" refY="5" markerWidth="7" markerHeight="7"
+                      orient="auto-start-reverse">
+                <path d="M0 0L10 5L0 10Z" class="arrowhead"/>
+              </marker>
+            </defs>
+
+            <g class="connectors" marker-end="url(#arrow-memory)">
+              <path d="M135 82V110H280V142"/>
+              <path d="M420 82V110H280"/>
+              <path d="M280 202V237"/>
+              <path d="M280 297V326"/>
+              <path d="M180 366H130V440"/>
+              <path d="M380 366H420V440"/>
+              <path d="M520 470H544V48H515"/>
+            </g>
+
+            <rect x="35" y="22" width="200" height="60" rx="4"/>
+            <text x="135" y="57">New batch record</text>
+
+            <rect x="320" y="22" width="195" height="60" rx="4" class="accent-node"/>
+            <text x="418" y="57">Trusted case bank</text>
+
+            <rect x="155" y="142" width="250" height="60" rx="4"/>
+            <text x="280" y="177">Retrieve related cases</text>
+
+            <rect x="155" y="237" width="250" height="60" rx="4"/>
+            <text x="280" y="272">Reviewer checks evidence</text>
+
+            <path d="M280 326L380 366L280 406L180 366Z" class="decision-node"/>
+            <text x="280" y="372">Confirmed?</text>
+
+            <text x="139" y="352" class="small-text">NO</text>
+            <text x="416" y="352" class="small-text">YES</text>
+
+            <rect x="30" y="440" width="200" height="60" rx="4"/>
+            <text x="130" y="465">Keep alert separate</text>
+            <text x="130" y="487" class="small-text">No trusted-case update</text>
+
+            <rect x="320" y="440" width="200" height="60" rx="4" class="accent-node"/>
+            <text x="420" y="465">Add confirmed case</text>
+            <text x="420" y="487" class="small-text">Available to later batches</text>
+          </svg>
+
+          <figcaption>
+            The return arrow updates future history only after
+            confirmation. This avoids automatically treating every
+            screening alert as verified evidence.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section class="demo-section" id="demo">
+      <div class="section wrap">
+        <div class="section-label">06 / INTERACTIVE BATCH DESK</div>
+        <div class="section-heading">
+          <h2>Same interface.<br><em>Different evidence.</em></h2>
+          <p>Four fictional scenarios.<br>No trained model or live sensor data.</p>
+        </div>
+
+        <!-- replace with -->
+        <div class="demo-grid">
+          <div class="demo-intro">
+            <span class="tag">SCRIPTED DEMONSTRATION</span>
+            <h3 class="demo-heading">What should the reviewer see?</h3>
+            <p>
+              Choose a scenario to explore the distinction between
+              a current anomaly, a historical connection and
+              insufficient evidence.
+            </p>
+            <label for="scenario">Batch scenario</label>
+            <select id="scenario">
+              <option value="baseline">A / Reference-like observations</option>
+              <option value="recurrence">B / Similar historical incidents</option>
+              <option value="anomaly">C / Unusual current observations</option>
+              <option value="uncertain">D / Insufficient evidence</option>
+            </select>
+            <p class="note">
+              “No flag” never means certified safe.
+              Batch decisions remain with the established QA workflow.
+            </p>
+          </div>
+
+          <div class="console">
+            <div class="console-heading">
+              <span>SPECTRAGUARD / EVIDENCE DESK</span>
+              <span class="tag">DEMO</span>
+            </div>
+
+            <div id="demo-result" aria-live="polite" aria-atomic="true">
+              <div class="batch-heading">
+                <h3 id="batch-name">Batch A</h3>
+                <span id="batch-state" class="result-state">No demo flag</span>
+              </div>
+              <div class="reading">
+                <span>Current observations</span>
+                <strong id="current-reading">Reference-like</strong>
+              </div>
+              <div class="reading">
+                <span>Historical context</span>
+                <strong id="history-reading">No relevant case shown</strong>
+              </div>
+              <div class="reading">
+                <span>Evidence quality</span>
+                <strong id="quality-reading">Usable in this example</strong>
+              </div>
+
+              <div class="decision">
+                <span class="eyebrow">REVIEW OUTCOME</span>
+                <h4 id="decision-title">Continue the normal QA workflow.</h4>
+                <p id="decision-copy">
+                  This example raises no screening flag. It does not
+                  certify the batch as safe or authorise release.
+                </p>
+              </div>
+
+              <div class="case-bank">
+                <span class="eyebrow">CASE EXPLANATION</span>
+                <p id="case-copy">No matching incident is included in this fictional scenario.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q&A -->
+    <section class="section wrap" id="questions">
+      <div class="section-label">07 / QUESTIONS & ANSWERS</div>
+
+      <div class="faq-layout">
+        <div class="faq-intro">
+          <h2>Good engineering<br>starts with<br><em>hard questions.</em></h2>
+          <p>The concept, the evidence and the work still ahead.</p>
+          <label for="faq-search">Find an answer</label>
+          <input id="faq-search" type="search"
+                 placeholder="Try “time”, “accuracy” or “memory”…">
+          <p id="faq-count" class="note" role="status">14 answers</p>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>What is SpectraGuard?</summary>
+            <div class="answer">
+              <p>
+                A student concept for preliminary food screening.
+                It combines optical and gas observations with confirmed
+                incident history to support quality-team review.
+                The proposed value is an earlier, explainable reason
+                to investigate a batch.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What existing problem does it address?</summary>
+            <div class="answer">
+              <p>
+                The project addresses the interval before useful
+                evidence becomes available and the need to connect
+                observations with batch history. Recent recall reports
+                also motivate traceability across shared ingredients.
+                These examples establish a problem to investigate;
+                they do not prove this device can solve it.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Have we actually cut testing time?</summary>
+            <div class="answer">
+              <p>
+                No measured reduction is available in the supplied
+                project material. The timing explorer subtracts a
+                hypothetical screening target from a published
+                incubation-stage duration. It demonstrates a possible
+                earlier-alert interval, not completed experimental
+                performance or reduced laboratory confirmation time.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why does the time graph use 48 hours?</summary>
+            <div class="answer">
+              <p>
+                It uses the nominal incubation duration from FDA’s
+                January 2026 aerobic plate count method [M1].
+                That is one documented stage, not a universal food-test
+                turnaround time. Other methods and workflows can
+                have different durations.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does this replace laboratory testing?</summary>
+            <div class="answer">
+              <p>
+                The proposed output is preliminary screening evidence.
+                It is not equivalent to an aerobic plate count or a
+                pathogen-specific confirmatory result. A facility’s
+                established quality checks and batch-release decisions
+                remain necessary.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why combine optical and gas sensors?</summary>
+            <div class="answer">
+              <p>
+                Studies [R1–R3] investigate combining optical imaging
+                and electronic-nose data for particular food-quality
+                tasks. Their findings give a rationale for testing
+                complementary measurements. They do not show that
+                every combination improves performance.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Which hardware is proposed?</summary>
+            <div class="answer">
+              <p>
+                The deck proposes an LED-based optical arrangement,
+                gas/VOC sensors and an ESP32-class controller.
+                Its example record contains eight optical and three
+                gas readings. Component choice, sampling design and
+                operating conditions still need validation.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can it identify every pathogen or contaminant?</summary>
+            <div class="answer">
+              <p>
+                No such capability has been demonstrated. Food-quality
+                or spoilage modelling is not the same as identifying
+                every safety hazard. The project must define a narrow
+                food category and target condition before making
+                detection claims.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do the papers validate our complete device?</summary>
+            <div class="answer">
+              <p>
+                They support parts of the scientific rationale.
+                Their instruments, datasets and tasks differ from
+                this proposal. SpectraGuard needs independent evidence
+                for its own hardware, models, timing and recurrence
+                layer before system-level claims are justified.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How does recurrence memory work?</summary>
+            <div class="answer">
+              <p>
+                The proposed engine retrieves similar confirmed cases
+                using sensor features and context. It would show the
+                matched records and relevant fields to a reviewer.
+                Similarity provides an investigation lead; it does
+                not establish a cause or confirm the current batch.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What happens when history is missing?</summary>
+            <div class="answer">
+              <p>
+                The interface should state that relevant history is
+                unavailable. Seeded fictional cases can demonstrate
+                the mechanism during development, but genuine
+                recurrence performance must be evaluated on real,
+                confirmed cases from later batches.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How will you evaluate accuracy and false alerts?</summary>
+            <div class="answer">
+              <p>
+                The proposed evaluation should compare optical-only,
+                gas-only and fused models on the same held-out batches.
+                Report false alerts, missed cases and inconclusive
+                outcomes. Test the memory layer separately using a
+                chronological split so future incidents cannot leak
+                into earlier predictions.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can it work offline on a processing line?</summary>
+            <div class="answer">
+              <p>
+                Local processing and a bounded local case bank are
+                design options. Compute capacity, storage, cleaning,
+                repeatable measurements, sensor recovery and line
+                integration remain engineering questions. This
+                website is an interface concept, not an industrial
+                controller.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it preserve food or prevent recalls?</summary>
+            <div class="answer">
+              <p>
+                The proposed device observes and flags evidence;
+                it does not itself preserve food. Any reduction in
+                waste or recalls would depend on reliable screening
+                and effective operational follow-up. Those impacts
+                have not been measured for this project.
+              </p>
+            </div>
+          </details>
+
+          <p id="faq-empty" hidden>No matching answers. Try “sensor”, “time” or “history”.</p>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- RESEARCH AT THE END -->
+    <section class="section wrap" id="research">
+      <!-- replace with -->
+    <div class="section-label">08 / RESEARCH &amp; EVIDENCE</div>
+      <div class="section-heading">
+        <h2>A scientific basis.<br><em>A clear validation gap.</em></h2>
+        <p>Five primary research papers.<br>Short descriptive labels link to the original publications.</p>
+      </div>
+
+      <div class="evidence-banner">
+        <strong>What the literature supports</strong>
+        <p>
+          Investigating optical sensing, electronic noses and data
+          fusion for defined food-quality tasks.
+        </p>
+        <strong>What SpectraGuard still needs to prove</strong>
+        <p>
+          Its low-cost hardware performance, generalisation to unseen
+          batches, real operating time and the added value of
+          recurrence memory.
+        </p>
+      </div>
+
+      <article class="paper-row" id="paper-1">
+        <span class="paper-id">R1 / 2025</span>
+        <div>
+          <h3>Combining electronic-nose and multispectral data for meat spoilage</h3>
+          <p class="paper-meta">Kodogiannis & Alshejari · Sensors · 25(10), 3198</p>
+          <p>
+            Investigates fused sensing for microbial-population
+            estimation and meat freshness classification.
+            <strong>Relevance:</strong> A close precedent for the
+            proposed combination of sensing modalities.
+          </p>
+          <p class="paper-limit">
+            Boundary: The study supplements a small dataset with
+            generated virtual samples. Its reported performance
+            cannot be transferred to our device or an industrial line.
+          </p>
+          <a class="text-link" href="https://doi.org/10.3390/s25103198"
+             target="_blank" rel="noopener noreferrer">Read paper / DOI ↗</a>
+        </div>
+      </article>
+
+      <article class="paper-row" id="paper-2">
+        <span class="paper-id">R2 / 2023</span>
+        <div>
+          <h3>Optical and odour data fusion for kiwifruit ripening</h3>
+          <p class="paper-meta">Bakhshipour et al. · Food Science & Nutrition · 11, 6116–6132</p>
+          <p>
+            Studies hyperspectral imaging together with electronic-nose
+            measurements to track kiwifruit ripening and quality.
+            <strong>Relevance:</strong> Demonstrates a food-specific
+            fusion approach beyond meat.
+          </p>
+          <p class="paper-limit">
+            Boundary: Ripening and quality prediction are different
+            tasks from identifying a foodborne pathogen.
+          </p>
+          <a class="text-link" href="https://doi.org/10.1002/fsn3.3548"
+             target="_blank" rel="noopener noreferrer">Read paper / DOI ↗</a>
+        </div>
+      </article>
+
+      <article class="paper-row" id="paper-3">
+        <span class="paper-id">R3 / 2019</span>
+        <div>
+          <h3>Optical and electronic-nose fusion during strawberry decay</h3>
+          <p class="paper-meta">Liu et al. · Postharvest Biology and Technology · 153, 152–160</p>
+          <p>
+            Evaluates combined hyperspectral and electronic-nose
+            information for microbial content and quality attributes
+            during strawberry decay.
+            <strong>Relevance:</strong> Supports investigating
+            complementary spectral and aroma features.
+          </p>
+          <p class="paper-limit">
+            Boundary: Hyperspectral equipment and a low-cost LED
+            sensor array do not provide interchangeable measurements.
+          </p>
+          <a class="text-link"
+             href="https://doi.org/10.1016/j.postharvbio.2019.03.017"
+             target="_blank" rel="noopener noreferrer">Read paper / DOI ↗</a>
+        </div>
+      </article>
+
+      <article class="paper-row" id="paper-4">
+        <span class="paper-id">R4 / 2020</span>
+        <div>
+          <h3>Hyperspectral features for strawberry quality assessment</h3>
+          <p class="paper-meta">Weng et al. · Sensors · 20(11), 3074</p>
+          <p>
+            Examines hyperspectral features for estimating strawberry
+            quality attributes, including soluble solids, pH and
+            vitamin C.
+            <strong>Relevance:</strong> Provides an optical measurement
+            and modelling example.
+          </p>
+          <p class="paper-limit">
+            Boundary: Quality-attribute estimates do not constitute
+            comprehensive contamination screening.
+          </p>
+          <a class="text-link" href="https://doi.org/10.3390/s20113074"
+             target="_blank" rel="noopener noreferrer">Read paper / DOI ↗</a>
+        </div>
+      </article>
+
+      <article class="paper-row" id="paper-5">
+        <span class="paper-id">R5 / 2013</span>
+        <div>
+          <h3>Portable electronic-nose assessment of beef spoilage</h3>
+          <p class="paper-meta">Papadopoulou et al. · Food Research International · 50(1), 241–249</p>
+          <p>
+            Evaluates a portable electronic nose alongside sensory
+            and microbiological assessment of beef.
+            <strong>Relevance:</strong> Supports comparing odour
+            measurements against independent reference outcomes.
+          </p>
+          <p class="paper-limit">
+            Boundary: The paper’s quartz-microbalance instrument
+            differs from the gas-sensor hardware in our proposal.
+          </p>
+          <a class="text-link"
+             href="https://doi.org/10.1016/j.foodres.2012.10.020"
+             target="_blank" rel="noopener noreferrer">Read paper / DOI ↗</a>
+        </div>
+      </article>
+
+      <article class="method-source" id="method-source">
+        <span class="eyebrow">M1 / TIMING REFERENCE</span>
+        <h3>FDA Bacteriological Analytical Manual, Chapter 3</h3>
+        <p>
+          January 2026 edition. The timing chart uses the nominal
+          duration of the conventional aerobic plate count incubation
+          stage. SpectraGuard has not demonstrated an equivalent test.
+        </p>
+        <a class="text-link"
+           href="https://www.fda.gov/food/laboratory-methods-food/bam-chapter-3-aerobic-plate-count"
+           target="_blank" rel="noopener noreferrer">
+          FDA / Method and current edition ↗
+        </a>
+      </article>
+
+      <div class="validation-plan">
+        <span class="eyebrow">NEXT / THE EVIDENCE WE NEED</span>
+        <div class="validation-grid">
+          <div><strong>01</strong><h4>Define the task</h4><p>One food category, a target condition and documented reference outcomes.</p></div>
+          <div><strong>02</strong><h4>Compare sensors</h4><p>Evaluate optical, gas and fused models on the same unseen batches.</p></div>
+          <div><strong>03</strong><h4>Test the memory</h4><p>Compare performance with and without history using later batches.</p></div>
+          <div><strong>04</strong><h4>Measure operation</h4><p>Record cycle time, failures, maintenance and reviewer workload.</p></div>
+        </div>
+      </div>
+    </section>
+
+     <!-- TEAM -->
+    <section class="team-section">
+      <div class="section wrap team" id="team">
+        <div class="section-label">09 / THE PEOPLE BEHIND THE PROJECT</div>
+        <div class="section-heading">
+          <div>
+            <h2>Team <em>BareMetal.</em></h2>
+            <p>Six students. One shared engineering challenge.</p>
+          </div>
+          <span class="team-id">BAREMETAL / ENGINEERING TEAM</span>
+        </div>
+
+        <div class="team-grid">
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/vahnivesh.png"
+              alt="Vahnivesh S Shine"
+            >
+          </div>
+
+          <h3>Vahnivesh S Shine</h3>
+          <p>Team BareMetal</p>
+
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/vahnivesh/" target="_blank" rel="noreferrer" aria-label="Vahnivesh S Shine on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/vahnivesh" target="_blank" rel="noreferrer" aria-label="Vahnivesh S Shine on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/sarang.jpeg"
+              alt="Sarang Warudkar"
+            >
+          </div>
+
+          <h3>Sarang Warudkar</h3>
+          <p>Team BareMetal</p>
+          <div class="team-socials">
+            <!-- current -->
+<a href="https://www.linkedin.com/in/sarang-warudkar-b515bb345/" target="_blank" rel="noreferrer" aria-label="Vahnivesh S Shine on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/sarangkw1116-oss" target="_blank" rel="noreferrer" aria-label="Sarang Warudkar on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/spandan.png"
+              alt="Om Spandan Patnaik"
+            >
+          </div>
+
+          <h3>Om Spandan Patnaik</h3>
+          <p>Team BareMetal</p>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/om-spandan-patnaik-861334365/" target="_blank" rel="noreferrer" aria-label="Om Spandan Patnaik on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/LooseEagle" target="_blank" rel="noreferrer" aria-label="Om Spandan Patnaik on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/macha.jpeg"
+              alt="Macha Raghunandan"
+            >
+          </div>
+
+          <h3>Macha Raghunandan</h3>
+          <p>Team BareMetal</p>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/raghunandan-macha-689b36383/" target="_blank" rel="noreferrer" aria-label="Macha Raghunandan on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/macharaghunandan" target="_blank" rel="noreferrer" aria-label="Macha Raghunandan on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/shreya.jpeg"
+              alt="Shreya Nayak"
+            >
+          </div>
+
+          <h3>Shreya Nayak</h3>
+          <p>Team BareMetal</p>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/shreya-nayak-60360b413/" target="_blank" rel="noreferrer" aria-label="Shreya Nayak on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Mac331-hub" target="_blank" rel="noreferrer" aria-label="Shreya Nayak on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="team-member">
+          <div class="profile-photo">
+            <img
+              src="images/smitha.jpeg"
+              alt="Smitha Mallya"
+            >
+          </div>
+
+          <h3>Smitha Mallya</h3>
+          <p>Team BareMetal</p>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/vahnivesh/" target="_blank" rel="noreferrer" aria-label="Smitha Mallya on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/smithamallya10-star" target="_blank" rel="noreferrer" aria-label="Smitha Mallya on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A9.99 9.99 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="#project">BareMetal ↗</a>
+    <p>SpectraGuard / Student concept / Sources checked September 2026</p>
+    <a class="text-link" href="#project">Back to top ↑</a>
+  </footer>
+</body>
+</html>
